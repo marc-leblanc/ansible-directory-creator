@@ -8,11 +8,11 @@ This currently uses no inventory and runs explicitly on localhost.
 
 Simply specify the project path
 
-```ansible-playbook -e "project_path=/some/path"```
+```ansible-playbook -e "project_path=/some/path" site.yml```
 
 Create an ansible project directory in */home/foo/bar*
 
-```ansible-playbook -e "project_path=/home/foo/bar"```
+```ansible-playbook -e "project_path=/home/foo/bar" site.yml```
 
 # Next steps
 This is probably the end of the road, it does what I need
