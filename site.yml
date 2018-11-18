@@ -1,0 +1,20 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Create directories
+    file: "path={{ project_path}}/{{ item }} state=directory"
+    loop:
+        - host_vars
+        - group_vars
+        - library
+        - roles
+  - name: Touch files
+    copy:
+        content: ""
+        force: no
+        mode: 644
+        dest: "{{ project_path }}/{{ item }}"
+    loop:
+        - site.yml
+        - inventory
+   
